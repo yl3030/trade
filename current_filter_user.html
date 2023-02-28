@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跟單資產</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_title">
+                <div class="back btn-back"><img src="./public/img/arrow-left-blue.svg" alt=""></div>
+                <h1>篩選交易員</h1>
+            </div>
+        </header>
+        <main class="main-inner">
+            <div class="px-3">
+                <div class="blueBox d-flex align-items-center justify-content-between">
+                    <h4 class="m-0 fs-14 color-blueSecond">帶單帳戶</h4>
+                    <p class="m-0">BingX 現貨網格</p>
+                </div>
+            </div>
+            <div class="px-3">
+                <div class="filter">
+                    <div class="filter_item">
+                        <div class="filter_text">
+                            <h5>投資額(USDT)</h5>
+                            <p>0-<span id="invest-output">0</span>+</p>
+                        </div>
+                        <div class="filter_bar" id="invest-bar"></div>
+                    </div>
+                    <div class="filter_item">
+                        <div class="filter_text">
+                            <h5>累計收益(USDT)</h5>
+                            <p>0-<span id="accumulate-output">0</span>+</p>
+                        </div>
+                        <div class="filter_bar" id="accumulate-bar"></div>
+                    </div>
+                    <div class="filter_item">
+                        <div class="filter_text">
+                            <h5>跟隨人數</h5>
+                            <p>0-<span id="follower-output">0</span>+</p>
+                        </div>
+                        <div class="filter_bar" id="follower-bar"></div>
+                    </div>
+                    <div class="filter_item">
+                        <div class="filter_text">
+                            <h5>年化收益率</h5>
+                            <p>0%-<span id="year-output">0</span>%</p>
+                        </div>
+                        <div class="filter_bar" id="year-bar"></div>
+                    </div>
+                    <div class="filter_item">
+                        <div class="filter_text">
+                            <h5>累計收益率</h5>
+                            <p>0%-<span id="accumulateProfit-output">0</span>%</p>
+                        </div>
+                        <div class="filter_bar" id="accumulateProfit-bar"></div>
+                    </div>
+                </div>
+                <div class="btn-bottom">
+                    <div class="row">
+                        <div class="col-6"><button class="btn-bottom_border">重置</button></div>
+                        <div class="col-6"><button class="btn-bottom_bg">確定</button></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal fade modal-common" id="modalAccount" tabindex="-1" aria-labelledby="modalAccountLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalAccountLabel">帶單帳戶</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+              <ul class="modal_list">
+                <li class="active" data-bs-dismiss="modal">全部</li>
+                <li data-bs-dismiss="modal">BingX標準合約</li>
+                <li data-bs-dismiss="modal">BingX永續合約</li>
+                <li data-bs-dismiss="modal">Binance合約</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/d3/d3.min.js"></script>
+    <script src="./public/js/common.js"></script>
+    <script src="./public/js/draggable/jquery-slider-min.js"></script>
+    <script src="./public/js/draggable/jquery.mobile.custom.min.js"></script>
+
+    <script>
+        $("#invest-bar").createSlide({
+            maxvalue: 1000,
+            interval: 1,
+            progress:true,
+            output: '#invest-output',
+        });
+
+        $("#accumulate-bar").createSlide({
+            maxvalue: 1000,
+            interval: 1,
+            progress:true,
+            output: '#accumulate-output',
+        });
+
+        $("#follower-bar").createSlide({
+            maxvalue: 1000,
+            interval: 1,
+            progress:true,
+            output: '#follower-output',
+        });
+
+        $("#year-bar").createSlide({
+            maxvalue: 1000,
+            interval: 1,
+            progress:true,
+            output: '#year-output',
+        });
+
+        $("#accumulateProfit-bar").createSlide({
+            maxvalue: 1000,
+            interval: 1,
+            progress:true,
+            output: '#accumulateProfit-output',
+        });
+
+        $(".filter_bar .dragger").text("");
+    </script>
+</body>
+</html>
