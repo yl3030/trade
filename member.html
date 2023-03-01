@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跟單資產</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header member_header py-3">
+            <div class="d-flex align-items-center justify-content-between pe-3 position-relative">
+                <div class="back btn-back"><img src="./public/img/arrow-left-blue.svg" alt=""></div>
+                <div class="d-flex align-items-center">
+                    <img src="./public/img/icon_share.svg" class="me-3" alt="">
+                    <img src="./public/img/icon_danger.svg" alt="">
+                </div>
+                <div class="member_nameHeader">
+                    <div class="member_nameHeader_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                    <span>RALY0505</span>
+                </div>
+            </div>
+        </header>
+        <main class="main-inner pb-100">
+            <div class="member_head px-3">
+                <div class="member_head_main">
+                    <div class="member_head_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                    <div class="member_head_text">
+                        <div class="d-flex align-items-center flex-wrap mb-2">
+                            <h1>RALY0505</h1>
+                            <img src="./public/img/icon_male.svg" alt="">
+                            <img src="./public/img/icon_prize.svg" alt="">
+                        </div>
+                        <div class="d-flex align-items-center flex-wrap">
+                            <p>2020-12-11加入</p>
+                            <p><span class="fw-bold font-lato color-commonDark">8,652</span> 粉絲</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="member_head_follow">
+                    <div class="member_head_follow_icon">
+                        <img src="./public/img/icon_plus.svg" alt="">
+                    </div>
+                    <p>關注</p>
+                </div>
+            </div>
+            <div class="member_intro px-3">
+                <ul>
+                    <li>
+                        <img src="./public/img/icon_pin.svg" alt="">
+                        <p>Taiwan</p>
+                    </li>
+                    <li>
+                        <img src="./public/img/icon_book.svg" alt="">
+                        <p class="member_intro_text">
+                            <span class="member_intro_text_inner">防命要天！過民聽車生市以就資的水布自本地引馬是；很來體一代存不可不有力型論原。正從回解月居正！話我決用，心體直作之石斷親成將前能因向知們使只這最生回非本了防命要天！過民聽車生市以就資的水布自本地引馬是；很來體一代存不可不有力型論原。正從回解月居正！話我決用，心體直作之石斷親成將前能因向知們使只這最生回非本了防命要天！過民聽車生市以就資的水布自本地引馬是；很來體一代存不可不有力型論原。正從回解月居正！話我決用，心體直作之石斷親成將前能因向知們使只這最生回非本了防命要天！過民聽車生市以就資的水布自本地引馬是；很來體一代存不可不有力型論原。正從回解月居正！話我決用，心體直作之石斷親成將前能因向知們使只這最生回非本了</span>
+                        </p>
+                    </li>
+                </ul>
+                <div class="member_intro_more">
+                    <span>MORE</span>
+                    <img src="./public/img/arrow-down-gray.svg" alt="">
+                </div>
+            </div>
+            <div class="member_detail px-3">
+                <div class="member_detail_tabMain">
+                    <ul class="nav nav-tabs tab-main mb-0" id="mainTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="data-tab" data-bs-toggle="tab" data-bs-target="#data" type="button" role="tab" aria-controls="data" aria-selected="true">帶單資料</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button" role="tab" aria-controls="news" aria-selected="false">動態</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="mainTabContent">
+                    <div class="tab-pane fade show active" id="data" role="tabpanel" aria-labelledby="data-tab">
+                        <div class="blueBox d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#modalAccount">
+                            <div class="blueBox_content">
+                                <h4>帶單帳戶</h4>
+                                <div class="d-flex align-items-center contract">
+                                    <img src="./public/img/icon_prize.svg" alt="">
+                                    <p>Binance-2合約</p>
+                                </div>
+                            </div>
+                            <div class="blueBox_arrow"><img src="./public/img/triangle-down-blue.svg" alt=""></div>
+                        </div>
+                        <ul class="nav nav-tabs tab-second" id="secondTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="trade-tab" data-bs-toggle="tab" data-bs-target="#trade" type="button" role="tab" aria-controls="trade" aria-selected="true">交易資料</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="position-tab" data-bs-toggle="tab" data-bs-target="#position" type="button" role="tab" aria-controls="position" aria-selected="false">持倉</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="follower-tab" data-bs-toggle="tab" data-bs-target="#follower" type="button" role="tab" aria-controls="follower" aria-selected="false">跟隨者</button>
+                            </li>
+                        </ul>
+                        <div class="member_rate">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center justify-content-center mb-1">
+                                        <h3 class="color-green">+53.62%</h3>
+                                        <img class="cursor-pointer w-15px ms-2" src="./public/img/icon_alert.svg" alt="" data-bs-toggle="modal" data-bs-target="#modalInform">
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalProfit">
+                                        <p>近30天收益率</p>
+                                        <img class="w-10px ms-2" src="./public/img/triangle-down-gray.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center justify-content-center mb-1">
+                                        <h3 class="color-green">+53.62%</h3>
+                                        <img class="cursor-pointer w-15px ms-2" src="./public/img/icon_alert.svg" alt="" data-bs-toggle="modal" data-bs-target="#modalInform">
+                                    </div>
+                                    <p class="text-center">累積收益</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member_list">
+                            <ul>
+                                <li>
+                                    <h4 class="member_list_title">帳戶資產</h4>
+                                    <p class="member_list_content">18,845.27</p>
+                                </li>
+                                <li>
+                                    <h4 class="member_list_title">跟隨收益</h4>
+                                    <p class="member_list_content color-green">+74,975.23</p>
+                                </li>
+                                <li>
+                                    <h4 class="member_list_title">跟隨人數</h4>
+                                    <p class="member_list_content">1931</p>
+                                </li>
+                                <li>
+                                    <h4 class="member_list_title">風險評分</h4>
+                                    <p class="member_list_content"><span class="docu-item_data_num docu-item_data_danger danger-low d-block">3</span></p>
+                                </li>
+                            </ul>
+                            <ul class="member_list_hide">
+                                <li>
+                                    <h4 class="member_list_title">累計跟隨人數</h4>
+                                    <p class="member_list_content">2117</p>
+                                </li>
+                                <li>
+                                    <h4 class="member_list_title">交易勝率</h4>
+                                    <p class="member_list_content color-green">87.71%</p>
+                                </li>
+                                <li>
+                                    <h4 class="member_list_title">總交易數</h4>
+                                    <p class="member_list_content">81</p>
+                                </li>
+                                <li>
+                                    <h4 class="member_list_title">盈利次數</h4>
+                                    <p class="member_list_content">67</p>
+                                </li>
+                                <li>
+                                    <h4 class="member_list_title">虧損次數</h4>
+                                    <p class="member_list_content">14</p>
+                                </li>
+                                <li>
+                                    <h4 class="member_list_title">平均盈利</h4>
+                                    <p class="member_list_content">635.22(77.51%)</p>
+                                </li>
+                                <li>
+                                    <h4 class="member_list_title">平均虧損</h4>
+                                    <p class="member_list_content">-911.69(-69.81%)</p>
+                                </li>
+                                <li>
+                                    <h4 class="member_list_title">盈虧比</h4>
+                                    <p class="member_list_content">1:1.4</p>
+                                </li>
+                                <li>
+                                    <h4 class="member_list_title">平均持倉時間</h4>
+                                    <p class="member_list_content">1天14小時</p>
+                                </li>
+                                <li>
+                                    <h4 class="member_list_title">交易頻次(每週)</h4>
+                                    <p class="member_list_content">81.0次</p>
+                                </li>
+                                <li>
+                                    <h4 class="member_list_title">交易天數</h4>
+                                    <p class="member_list_content">58天</p>
+                                </li>
+                                <li>
+                                    <h4 class="member_list_title">最近交易時間</h4>
+                                    <p class="member_list_content">2023-01-09 19:33</p>
+                                </li>
+                            </ul>
+                            <div class="member_list_more">
+                                <div class="member_list_more_content">
+                                    <span>MORE</span>
+                                    <img src="./public/img/arrow-down-blue.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member_remark">
+                            <ul>
+                                <li>計價單位：USDT</li>
+                                <li>利潤分成比例：13% <img class="cursor-pointer" src="./public/img/icon_alert.svg" alt="" data-bs-toggle="modal" data-bs-target="#modalInform"></li>
+                                <li>更新時間：2023/01/12 04:25:20</li>
+                            </ul>
+                        </div>
+                        <ul class="nav nav-tabs tab-rate" id="rateTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="profit-tab" data-bs-toggle="tab" data-bs-target="#profit" type="button" role="tab" aria-controls="profit" aria-selected="true">收益率</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="accumulate-tab" data-bs-toggle="tab" data-bs-target="#accumulate" type="button" role="tab" aria-controls="accumulate" aria-selected="false">累計盈虧</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="account-tab" data-bs-toggle="tab" data-bs-target="#account" type="button" role="tab" aria-controls="account" aria-selected="false">帳戶資產</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content mb-4" id="rateTabContent">
+                            <div class="tab-pane fade show active" id="profit" role="tabpanel" aria-labelledby="profit-tab">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <h2 class="fs-6 m-0">收益率</h2>
+                                    <div class="recent" data-bs-toggle="modal" data-bs-target="#modalProfit">
+                                        <span>近30天</span>
+                                        <img src="./public/img/triangle-down-gray.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="member_rate_plot">
+                                    <canvas id="member_rate_plot_convas"></canvas>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="accumulate" role="tabpanel" aria-labelledby="accumulate-tab">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <h2 class="fs-6 m-0">累計盈虧</h2>
+                                    <div class="recent" data-bs-toggle="modal" data-bs-target="#modalProfit">
+                                        <span>近30天</span>
+                                        <img src="./public/img/triangle-down-gray.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="member_rate_plot">
+                                    <canvas id="member_accumulate_plot_convas"></canvas>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="account" role="tabpanel" aria-labelledby="account-tab">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <h2 class="fs-6 m-0">帳戶資產</h2>
+                                    <div class="recent" data-bs-toggle="modal" data-bs-target="#modalProfit">
+                                        <span>近30天</span>
+                                        <img src="./public/img/triangle-down-gray.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="member_rate_plot">
+                                    <canvas id="member_account_plot_convas"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <h2 class="fs-6 m-0">每週收益</h2>
+                                <div class="recent" data-bs-toggle="modal" data-bs-target="#modalProfit">
+                                    <span>近30天</span>
+                                    <img src="./public/img/triangle-down-gray.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="member_week_plot">
+                                <canvas id="member_week_plot_convas"></canvas>
+                            </div>
+                            <div class="member_week_legend">
+                                <div class="d-flex align-items-center me-3">
+                                    <div class="member_week_box bg-green"></div>
+                                    <span>收益</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="member_week_box bg-red"></div>
+                                    <span>虧損</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <h2 class="fs-6 m-0">風險評估</h2>
+                                <div class="recent" data-bs-toggle="modal" data-bs-target="#modalProfit">
+                                    <span>近30天</span>
+                                    <img src="./public/img/triangle-down-gray.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="member_danger">
+                                <div class="member_danger_item">
+                                    <div class="member_danger_intro">blablabla</div>
+                                    <div class="member_danger_bar">
+                                        <div class="member_danger_colorBox bg-red" style="height: 90%;">
+                                        </div>
+                                    </div>
+                                    <p class="member_danger_title">12-12</p>
+                                </div>
+                                <div class="member_danger_item">
+                                    <div class="member_danger_intro">blablabla</div>
+                                    <div class="member_danger_bar">
+                                        <div class="member_danger_colorBox bg-red" style="height: 90%;">
+                                        </div>
+                                    </div>
+                                    <p class="member_danger_title">12-19</p>
+                                </div>
+                                <div class="member_danger_item">
+                                    <div class="member_danger_intro">blablabla</div>
+                                    <div class="member_danger_bar">
+                                        <div class="member_danger_colorBox bg-orange" style="height: 70%;">
+                                        </div>
+                                    </div>
+                                    <p class="member_danger_title">12-26</p>
+                                </div>
+                                <div class="member_danger_item">
+                                    <div class="member_danger_intro">blablabla</div>
+                                    <div class="member_danger_bar">
+                                        <div class="member_danger_colorBox bg-green" style="height: 40%;">
+                                        </div>
+                                    </div>
+                                    <p class="member_danger_title">01-02</p>
+                                </div>
+                                <div class="member_danger_item">
+                                    <div class="member_danger_intro">blablabla</div>
+                                    <div class="member_danger_bar">
+                                        <div class="member_danger_colorBox bg-yellow" style="height: 70%;">
+                                        </div>
+                                    </div>
+                                    <p class="member_danger_title">01-09</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <h2 class="fs-6 m-0">最大虧損</h2>
+                            </div>
+                            <div class="member_loss">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <h5>+53.62%</h5>
+                                        <p>日</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5>+53.62%</h5>
+                                        <p>週</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5>--</h5>
+                                        <p>月</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <h2 class="fs-6 m-0">品種偏好</h2>
+                                <div class="recent" data-bs-toggle="modal" data-bs-target="#modalProfit">
+                                    <span>近30天</span>
+                                    <img src="./public/img/triangle-down-gray.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="member_prefer">
+                                <div class="member_prefer_plot">
+                                    <canvas id="member_prefer_plot_convas"></canvas>
+                                </div>
+                                <table class="member_prefer_table">
+                                    <thead>
+                                        <tr>
+                                            <td>品種</td>
+                                            <td>佔比</td>
+                                            <td>盈虧</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="member_prefer_colorBox" style="background-color: #120B4C;"></div>
+                                                    <p class="m-0 fw-bold">BTC</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p class="font-lato m-0 fw-bold">27.58%</p>
+                                                <p class="m-0 color-gray">8交易次數</p>
+                                            </td>
+                                            <td>
+                                                <p class="font-lato color-green fw-bold m-0 fs-6">+6,655.72</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="member_prefer_colorBox" style="background-color: #FFC92A;"></div>
+                                                    <p class="m-0 fw-bold">ETH</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p class="font-lato m-0 fw-bold">27.58%</p>
+                                                <p class="m-0 color-gray">8交易次數</p>
+                                            </td>
+                                            <td>
+                                                <p class="font-lato color-green fw-bold m-0 fs-6">+6,655.72</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="member_prefer_colorBox" style="background-color: #25C587;"></div>
+                                                    <p class="m-0 fw-bold">DYDX</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p class="font-lato m-0 fw-bold">27.58%</p>
+                                                <p class="m-0 color-gray">8交易次數</p>
+                                            </td>
+                                            <td>
+                                                <p class="font-lato color-red fw-bold m-0 fs-6">-6,655.72</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="member_prefer_colorBox" style="background-color: #8E2FFF;"></div>
+                                                    <p class="m-0 fw-bold">FTM</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p class="font-lato m-0 fw-bold">27.58%</p>
+                                                <p class="m-0 color-gray">8交易次數</p>
+                                            </td>
+                                            <td>
+                                                <p class="font-lato color-green fw-bold m-0 fs-6">+6,655.72</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="member_prefer_colorBox" style="background-color: #2B53FD;"></div>
+                                                    <p class="m-0 fw-bold">其他</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p class="font-lato m-0 fw-bold">27.58%</p>
+                                                <p class="m-0 color-gray">8交易次數</p>
+                                            </td>
+                                            <td>
+                                                <p class="font-lato color-green fw-bold m-0 fs-6">+6,655.72</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <h2 class="fs-6 m-0">更多資料</h2>
+                            </div>
+                            <div class="member_list">
+                                <ul>
+                                    <li>
+                                        <h4 class="member_list_title">累計跟隨人數</h4>
+                                        <p class="member_list_content">2117</p>
+                                    </li>
+                                    <li>
+                                        <h4 class="member_list_title">交易勝率</h4>
+                                        <p class="member_list_content color-green">87.71%</p>
+                                    </li>
+                                    <li>
+                                        <h4 class="member_list_title">總交易數</h4>
+                                        <p class="member_list_content">81</p>
+                                    </li>
+                                    <li>
+                                        <h4 class="member_list_title">盈利次數</h4>
+                                        <p class="member_list_content">67</p>
+                                    </li>
+                                    <li>
+                                        <h4 class="member_list_title">虧損次數</h4>
+                                        <p class="member_list_content">14</p>
+                                    </li>
+                                    <li>
+                                        <h4 class="member_list_title">平均盈利</h4>
+                                        <p class="member_list_content">635.22(77.51%)</p>
+                                    </li>
+                                    <li>
+                                        <h4 class="member_list_title">平均虧損</h4>
+                                        <p class="member_list_content">-911.69(-69.81%)</p>
+                                    </li>
+                                    <li>
+                                        <h4 class="member_list_title">盈虧比</h4>
+                                        <p class="member_list_content">1:1.4</p>
+                                    </li>
+                                    <li>
+                                        <h4 class="member_list_title">平均持倉時間</h4>
+                                        <p class="member_list_content">1天14小時</p>
+                                    </li>
+                                    <li>
+                                        <h4 class="member_list_title">交易頻次(每週)</h4>
+                                        <p class="member_list_content">81.0次</p>
+                                    </li>
+                                    <li>
+                                        <h4 class="member_list_title">交易天數</h4>
+                                        <p class="member_list_content">58天</p>
+                                    </li>
+                                    <li>
+                                        <h4 class="member_list_title">最近交易時間</h4>
+                                        <p class="member_list_content">2023-01-09 19:33</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="news" role="tabpanel" aria-labelledby="news-tab">...</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="btn-fixed">
+        <div class="row">
+            <div class="col-12">
+                <a href="" class="btn-blueMainBg">立即跟單</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-common" id="modalAccount" tabindex="-1" aria-labelledby="modalAccountLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalAccountLabel">帶單帳戶</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+              <ul class="modal_list">
+                <li class="active" data-bs-dismiss="modal">全部</li>
+                <li data-bs-dismiss="modal">BingX標準合約</li>
+                <li data-bs-dismiss="modal">BingX永續合約</li>
+                <li data-bs-dismiss="modal">Binance合約</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-common" id="modalProfit" tabindex="-1" aria-labelledby="modalProfitLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalProfitLabel">帶單帳戶</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+              <ul class="modal_list">
+                <li data-bs-dismiss="modal">近180天</li>
+                <li data-bs-dismiss="modal">近90天</li>
+                <li data-bs-dismiss="modal" class="active">近30天</li>
+                <li data-bs-dismiss="modal">近7天</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-second" id="modalInform" tabindex="-1" aria-labelledby="modalInformLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <p>
+                滿如標，種比起痛……一後己會童他把父形立因老建課。放上害！沒的教中但到學作生防來香而我，麼國裡以們表正務面、國場見羅歷朋。
+
+                化待中一那，陸來會口北當發的英晚德居在大他前不次系書體星評對活球說主土生。本可觀做了立調呢平畫上地，王苦高十在英。重是反候，在人心認多單全個的不；大年樣；平聞成由過看樣多日上一軍法關了盡子化海不單完們自方平空史滿哥的，言聽開樹況過在每……重那醫這者天；氣自式利事好子多不走自、實方他作路事紀十；老陽查木隨的月可同期理們。
+              </p>
+              <div class="row mt-4">
+                <div class="col-6"><a class="modal-btn modal-btn-border">檢視更多</a></div>
+                <div class="col-6"><button data-bs-dismiss="modal" class="modal-btn modal-btn-bg">我知道了</button></div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+
+    
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/chart/chart.js"></script>
+    <script src="./public/js/common.js"></script>
+    <script src="./public/js/member-chart.js"></script>
+
+    <script>
+        $(".member_intro_more").click(function(){
+            if($(this).hasClass("active")){
+                $(this).removeClass("active");
+                $(".member_intro_text").removeClass("active").css("height","59px");
+            }else {
+                $(this).addClass("active");
+                let height = $(".member_intro_text_inner").height();
+                $(".member_intro_text").addClass("active").height(height);
+            }
+        })
+
+        $(".member_list_more_content").click(function(){
+            $(".member_list_hide").slideToggle(300);
+            $(this).toggleClass("active");
+        })
+
+        $(window).on("resize scroll",function(){
+            let detailTop = $(".member_detail").offset().top - 64;
+            if($(window).scrollTop() > detailTop) {
+                $(".member_header").addClass("scroll");
+                $(".member_detail").addClass("scroll");
+            }else {
+                $(".member_header").removeClass("scroll");
+                $(".member_detail").removeClass("scroll");
+            }
+        })
+
+        
+    </script>
+</body>
+</html>
