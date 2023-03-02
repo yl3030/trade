@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跟單資產</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_title">
+                <div class="back btn-back"><img src="./public/img/arrow-left-blue.svg" alt=""></div>
+                <h1>10SET提幣</h1>
+            </div>
+        </header>
+        <main class="main-inner px-3 pb-150">
+            <ul class="nav nav-tabs tab-second mb-4" id="secondTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="normal-tab" data-bs-toggle="tab" data-bs-target="#normal" type="button" role="tab" aria-controls="normal" aria-selected="true">普通提幣</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="transfer-tab" data-bs-toggle="tab" data-bs-target="#transfer" type="button" role="tab" aria-controls="transfer" aria-selected="false">內部轉帳</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="secondTabContent">
+                <div class="tab-pane fade show active" id="normal" role="tabpanel" aria-labelledby="normal-tab">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="color-gray me-2">鏈名稱</span>
+                        <ul class="docu-setting_type m-0">
+                            <li class="active">ERC20</li>
+                            <li>ERC22</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex align-items-center mb-3 pick_detail_address">
+                        <input type="text" class="input-common" placeholder="請輸入地址">
+                        <div class="pick_detail_icon"><img src="./public/img/icon_scan.svg" alt=""></div>
+                        <div class="pick_detail_icon" data-bs-toggle="modal" data-bs-target="#modalPassword"><img src="./public/img/icon_sticky-note.svg" alt=""></div>
+                    </div>
+                    <input type="text" class="input-common mb-3" placeholder="請輸入提幣數量">
+                    <p class="color-gray mb-3">資金帳戶：100 10SET</p>
+                    <input type="text" class="input-common mb-3" placeholder="備註">
+                    <p class="color-gray mb-3">服務費：0.099 10SET</p>
+                    <p class="color-gray mb-3">
+                        操作提醒：<br>
+                        等他公務麼工去仍和解我所流著德痛：禮社級：一阿專代，農年高對為也看己跟。數廣黨她化德生世之，自野感查個歷苦了術然大山富，職夫學，羅長能看好作如生，質世內、的安失歡人有傳爸光好處作感起解計們大另。
+                    </p>
+                </div>
+                <div class="tab-pane fade" id="transfer" role="tabpanel" aria-labelledby="transfer-tab">
+                    <div class="d-flex align-items-center cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalAccount">
+                        <span class="me-2">使用者UID</span>
+                        <img class="w-10px" src="./public/img/triangle-down-gray.svg" alt="">
+                    </div>
+                    <input type="text" class="input-common mb-3" placeholder="請輸入UID">
+                    <input type="text" class="input-common mb-3" placeholder="請輸入提幣數量">
+                    <p class="color-gray mb-3">資金帳戶：100 10SET</p>
+                    <input type="text" class="input-common mb-3" placeholder="備註">
+                    <p class="color-gray mb-3">服務費：0.099 10SET</p>
+                    <p class="color-gray mb-3">
+                        操作提醒：<br>
+                        等他公務麼工去仍和解我所流著德痛：禮社級：一阿專代，農年高對為也看己跟。數廣黨她化德生世之，自野感查個歷苦了術然大山富，職夫學，羅長能看好作如生，質世內、的安失歡人有傳爸光好處作感起解計們大另。
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="pick_detail_bottom bg-white">
+        <div class="d-flex align-items-center justify-content-between mb-2">
+            <span class="color-gray">實際到帳</span>
+            <div>
+                <span class="font-lato fw-bold color-blueSecond fs-4 me-1">800</span>
+                <span class="font-lato color-gray">10SET</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <a href="" class="btn-blueMainBg">提幣</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-common" id="modalPassword" tabindex="-1" aria-labelledby="modalPasswordLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalPasswordLabel">設定資金密碼</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+              <div class="pick_detail_password px-3">
+                <div class="row">
+                    <div class="col-2"><input type="number"></div>
+                    <div class="col-2"><input type="number"></div>
+                    <div class="col-2"><input type="number"></div>
+                    <div class="col-2"><input type="number"></div>
+                    <div class="col-2"><input type="number"></div>
+                    <div class="col-2"><input type="number"></div>
+                </div>
+                <button class="btn-blueMainBg">確定</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-common" id="modalAccount" tabindex="-1" aria-labelledby="modalAccountLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+              <ul class="modal_list">
+                <li class="active" data-bs-dismiss="modal">使用者UID</li>
+                <li data-bs-dismiss="modal">郵箱</li>
+                <li data-bs-dismiss="modal">手機號</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/d3/d3.min.js"></script>
+    <script src="./public/js/common.js"></script>
+    <script src="./public/js/income.js"></script>
+
+    <script>
+        $("#modalDocu .modal_list li").click(function(){
+            let docuName = $(this).text();
+            $(".modalDocu-name").text(docuName);
+            $(this).addClass("active").siblings("li").removeClass("active");
+        })
+    </script>
+
+</body>
+</html>

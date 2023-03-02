@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跟單資產</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_title">
+                <div class="back btn-back"><img src="./public/img/arrow-left-blue.svg" alt=""></div>
+                <h1>資產紀錄</h1>
+            </div>
+        </header>
+        <main class="main-inner px-3">
+            <div class="position-relative mb-3">
+                <ul class="nav nav-tabs tab-second" id="secondTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="detail-tab" data-bs-toggle="tab" data-bs-target="#detail" type="button" role="tab" aria-controls="detail" aria-selected="true">資金明細</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="collect-tab" data-bs-toggle="tab" data-bs-target="#collect" type="button" role="tab" aria-controls="collect" aria-selected="false">佣金彙整</button>
+                    </li>
+                </ul>
+                <a href="" class="position-absolute end-0 top-center" data-bs-toggle="modal" data-bs-target="#modalFilter"><img class="w-20px" src="./public/img/icon_filter.svg" alt=""></a>
+            </div>
+            <div class="tab-content" id="secondTabContent">
+                <div class="tab-pane fade show active" id="detail" role="tabpanel" aria-labelledby="detail-tab">
+                    <div class="money_detail">
+                        <div>
+                            <p class="m-0">資金劃轉-轉入</p>
+                            <p class="m-0 color-gray">2分鐘前</p>
+                        </div>
+                        <div class="text-end">
+                            <p class="m-0 font-lato">2000.03 10SET</p>
+                            <p class="m-0 color-gray">已確認</p>
+                        </div>
+                    </div>
+                    <div class="money_detail">
+                        <div>
+                            <p class="m-0">資金劃轉-轉入</p>
+                            <p class="m-0 color-gray">2分鐘前</p>
+                        </div>
+                        <div class="text-end">
+                            <p class="m-0 font-lato">2000.03 10SET</p>
+                            <p class="m-0 color-gray">已確認</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="collect" role="tabpanel" aria-labelledby="collect-tab">
+                    <div class="dataEmpty">
+                        <img src="./public/img/icon_data-source.svg" alt="">
+                        <p>查無資料</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal fade modal-common" id="modalFilter" tabindex="-1" aria-labelledby="modalFilterLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalFilterLabel">篩選</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+                <div class="assets_filter px-3 mb-3">
+                    <div class="d-flex align-items-center assets_filter_coin mb-3">
+                        <h5>幣種</h5>
+                        <a href="">
+                            <span>全部</span>
+                            <img src="./public/img/arrow-right-gray.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="assets_filter_type mb-4">
+                        <h5 class="mb-2">型別</h5>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="assets_filter_type_item active">全部類型</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="assets_filter_type_item">充幣</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="assets_filter_type_item">提幣</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="assets_filter_type_item">資金劃轉</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="assets_filter_type_item">幣幣兌換</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="assets_filter_type_item">合約交易</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="assets_filter_type_item">佣金</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="assets_filter_type_item">系統</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="assets_filter_type_item">現貨返佣</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="assets_filter_type_item">反現</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="assets_filter_type_item">其他</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-6"><a class="modal-btn modal-btn-border">重置</a></div>
+                        <div class="col-6"><button data-bs-dismiss="modal" class="modal-btn modal-btn-bg">確定</button></div>
+                      </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/d3/d3.min.js"></script>
+    <script src="./public/js/common.js"></script>
+
+    <script>
+        $(".assets_filter_type_item").click(function(){
+            $(this).addClass("active").parent("div").siblings("div").find(".assets_filter_type_item").removeClass("active");
+        })
+    </script>
+
+</body>
+</html>

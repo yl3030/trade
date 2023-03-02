@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跟單資產</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_title">
+                <div class="back btn-back"><img src="./public/img/arrow-left-blue.svg" alt=""></div>
+                <h1>舉報交易員</h1>
+            </div>
+        </header>
+        <main class="main-inner">
+            <div class="report px-3">
+                <div class="report_item">
+                    <span>抄襲帶單</span>
+                    <div class="report_check"><img src="./public/img/icon_check.svg" alt=""></div>
+                </div>
+                <div class="report_item">
+                    <span>多帳號帶單</span>
+                    <div class="report_check"><img src="./public/img/icon_check.svg" alt=""></div>
+                </div>
+                <div class="report_item">
+                    <span>展示號帶單</span>
+                    <div class="report_check"><img src="./public/img/icon_check.svg" alt=""></div>
+                </div>
+                <div class="report_item">
+                    <span>展示社交帳號</span>
+                    <div class="report_check"><img src="./public/img/icon_check.svg" alt=""></div>
+                </div>
+                <div class="report_item">
+                    <span>其他</span>
+                    <div class="report_check"><img src="./public/img/icon_check.svg" alt=""></div>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="px-3">
+                <button class="btn-blueMainBg mt-3">提交</button>
+            </div>
+        </main>
+    </div>
+
+    
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/chart/chart.js"></script>
+    <script src="./public/js/common.js"></script>
+
+    <script>
+        $(".report_item").click(function(){
+            $(this).find(".report_check").toggleClass("active");
+        })
+    </script>
+</body>
+</html>

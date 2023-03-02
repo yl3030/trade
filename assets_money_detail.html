@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跟單資產</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header py-3">
+            <div class="d-flex align-items-center justify-content-between pe-3 position-relative">
+                <div class="back btn-back"><img src="./public/img/arrow-left-blue.svg" alt=""></div>
+                <div class="member_nameHeader">
+                    <div class="member_nameHeader_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                    <span>10SET</span>
+                </div>
+            </div>
+        </header>
+        <main class="main-inner">
+            <div class="px-3 pb-100">
+                <p class="color-gray mb-2">總額</p>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <span class="font-lato fs-5 fw-bold">999999</span>
+                    <span class="color-gray font-lato">=NT$100</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <div>
+                        <p class="color-gray m-0">可用餘額</p>
+                        <p class="font-lato m-0 fw-bold fs-6">9000</p>
+                    </div>
+                    <div>
+                        <p class="color-gray m-0">凍結</p>
+                        <p class="font-lato m-0 fw-bold fs-6">8888</p>
+                    </div>
+                    <div>
+                        <p class="color-gray m-0">成本價</p>
+                        <p class="font-lato m-0 fw-bold fs-6">NT$9000</p>
+                    </div>
+                    <div>
+                        <p class="color-gray m-0">持倉盈虧</p>
+                        <p class="font-lato m-0 fw-bold fs-6">$NT8888</p>
+                    </div>
+                </div>
+                <div class="position-relative mb-3">
+                    <ul class="nav nav-tabs tab-second" id="secondTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="detail-tab" data-bs-toggle="tab" data-bs-target="#detail" type="button" role="tab" aria-controls="detail" aria-selected="true">資金明細</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="collect-tab" data-bs-toggle="tab" data-bs-target="#collect" type="button" role="tab" aria-controls="collect" aria-selected="false">佣金彙整</button>
+                        </li>
+                    </ul>
+                    <a href="" class="position-absolute end-0 top-center" data-bs-toggle="modal" data-bs-target="#modalFilter"><img class="w-20px" src="./public/img/icon_filter.svg" alt=""></a>
+                </div>
+                <div class="tab-content" id="secondTabContent">
+                    <div class="tab-pane fade show active" id="detail" role="tabpanel" aria-labelledby="detail-tab">
+                        <div class="money_detail">
+                            <div>
+                                <p class="m-0">資金劃轉-轉入</p>
+                                <p class="m-0 color-gray">2分鐘前</p>
+                            </div>
+                            <div class="text-end">
+                                <p class="m-0 font-lato">2000.03 10SET</p>
+                                <p class="m-0 color-gray">已確認</p>
+                            </div>
+                        </div>
+                        <div class="money_detail">
+                            <div>
+                                <p class="m-0">資金劃轉-轉入</p>
+                                <p class="m-0 color-gray">2分鐘前</p>
+                            </div>
+                            <div class="text-end">
+                                <p class="m-0 font-lato">2000.03 10SET</p>
+                                <p class="m-0 color-gray">已確認</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="collect" role="tabpanel" aria-labelledby="collect-tab">
+                        <div class="dataEmpty">
+                            <img src="./public/img/icon_data-source.svg" alt="">
+                            <p>查無資料</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-bottom">
+                    <div class="row">
+                        <div class="col-6"><button class="btn-bottom_border">提幣</button></div>
+                        <div class="col-6"><button class="btn-bottom_border">劃轉</button></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal fade modal-common" id="modalFilter" tabindex="-1" aria-labelledby="modalFilterLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalFilterLabel">篩選</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+              <ul class="modal_list">
+                <li class="active" data-bs-dismiss="modal">全部類型</li>
+                <li data-bs-dismiss="modal">充幣</li>
+                <li data-bs-dismiss="modal">提幣</li>
+                <li data-bs-dismiss="modal">資金劃轉</li>
+                <li data-bs-dismiss="modal">幣幣兌換</li>
+                <li data-bs-dismiss="modal">佣金</li>
+                <li data-bs-dismiss="modal">系統</li>
+                <li data-bs-dismiss="modal">現貨返佣</li>
+                <li data-bs-dismiss="modal">反現</li>
+                <li data-bs-dismiss="modal">其他</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/chart/chart.js"></script>
+    <script src="./public/js/common.js"></script>
+    <script src="./public/js/member-chart.js"></script>
+
+</body>
+</html>

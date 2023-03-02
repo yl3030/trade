@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跟單資產</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_title">
+                <div class="back btn-back"><img src="./public/img/arrow-left-blue.svg" alt=""></div>
+                <h1>我的跟單</h1>
+            </div>
+        </header>
+        <main class="main-inner px-3">
+            <div class="d-flex align-items-center cursor-pointer mb-3" data-bs-toggle="modal" data-bs-target="#modalDocu">
+                <p class="m-0 fw-bold fs-14 me-2 modalDocu-name">USDT跟單</p>
+                <img src="./public/img/triangle-down-dark.svg" alt="">
+            </div>
+            <ul class="nav nav-tabs tab-second mb-3" id="secondTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="contract-tab" data-bs-toggle="tab" data-bs-target="#contract" type="button" role="tab" aria-controls="contract" aria-selected="true">合約</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="current-tab" data-bs-toggle="tab" data-bs-target="#current" type="button" role="tab" aria-controls="current" aria-selected="false">現貨網格</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="secondTabContent">
+                <div class="tab-pane fade show active" id="contract" role="tabpanel" aria-labelledby="contract-tab">
+                    <div>
+                        <div class="docu-item">
+                            <div class="docu-item_title">
+                                <div class="d-flex align-items-center">
+                                    <div class="docu-item_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                                    <div class="docu-item_name">
+                                        <h3>RALY0505</h3>
+                                        <div class="d-flex align-items-center contract">
+                                            <img src="./public/img/icon_prize.svg" alt="">
+                                            <p>Binance-2合約</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="">跟單</a>
+                            </div>
+                            <div class="docu-item_data">
+                                <div class="docu-item_data_income">
+                                    <div>
+                                        <h4 class="docu-item_data_num color-green">+53.62%</h4>
+                                        <p class="docu-item_data_title">近30天收益率</p>
+                                    </div>
+                                    <div class="docu-item_plot">
+                                        <svg class="docu-item_plot_svg" id="docuPlot-1"></svg>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="docu-item_data_num">1932</h4>
+                                    <p class="docu-item_data_title">跟隨者</p>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="docu-item_data_num docu-item_data_danger danger-low">3</h4>
+                                    <p class="docu-item_data_title">風險評分</p>
+                                </div>
+                            </div>
+                            <div class="docu-item_news">
+                                <div class="docu-item_news_title">最新動態</div>
+                                <a href="" class="docu-item_news_content">
+                                    <p>大家好我是Raly，其實這篇應大家好我是Raly，其實這篇應大家好我是Raly，其實這篇應</p>
+                                    <div class="docu-item_news_arrow"><img src="./public/img/arrow-right-gray.svg" alt=""></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="docu-item">
+                            <div class="docu-item_title">
+                                <div class="d-flex align-items-center">
+                                    <div class="docu-item_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                                    <div class="docu-item_name">
+                                        <h3>RALY0505</h3>
+                                        <div class="d-flex align-items-center">
+                                            <img src="./public/img/icon_prize.svg" alt="">
+                                            <p>Binance-2合約</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="">跟單</a>
+                            </div>
+                            <div class="docu-item_data">
+                                <div class="docu-item_data_income">
+                                    <div>
+                                        <h4 class="docu-item_data_num color-green">+53.62%</h4>
+                                        <p class="docu-item_data_title">近30天收益率</p>
+                                    </div>
+                                    <div class="docu-item_plot">
+                                        <svg class="docu-item_plot_svg" id="docuPlot-2"></svg>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="docu-item_data_num">1932</h4>
+                                    <p class="docu-item_data_title">跟隨者</p>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="docu-item_data_num docu-item_data_danger danger-high">6</h4>
+                                    <p class="docu-item_data_title">風險評分</p>
+                                </div>
+                            </div>
+                            <div class="docu-item_news">
+                                <div class="docu-item_news_title">最新動態</div>
+                                <a href="" class="docu-item_news_content">
+                                    <p>大家好我是Raly，其實這篇應大家好我是Raly，其實這篇應大家好我是Raly，其實這篇應</p>
+                                    <div class="docu-item_news_arrow"><img src="./public/img/arrow-right-gray.svg" alt=""></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="docu-item">
+                            <div class="docu-item_title">
+                                <div class="d-flex align-items-center">
+                                    <div class="docu-item_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                                    <div class="docu-item_name">
+                                        <h3>RALY0505</h3>
+                                        <div class="d-flex align-items-center contract">
+                                            <img src="./public/img/icon_prize.svg" alt="">
+                                            <p>Binance-2合約</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="">跟單</a>
+                            </div>
+                            <div class="docu-item_data">
+                                <div class="docu-item_data_income">
+                                    <div>
+                                        <h4 class="docu-item_data_num color-green">+53.62%</h4>
+                                        <p class="docu-item_data_title">近30天收益率</p>
+                                    </div>
+                                    <div class="docu-item_plot">
+                                        <svg class="docu-item_plot_svg" id="docuPlot-3"></svg>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="docu-item_data_num">1932</h4>
+                                    <p class="docu-item_data_title">跟隨者</p>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="docu-item_data_num docu-item_data_danger danger-low">3</h4>
+                                    <p class="docu-item_data_title">風險評分</p>
+                                </div>
+                            </div>
+                            <div class="docu-item_news">
+                                <div class="docu-item_news_title">最新動態</div>
+                                <a href="" class="docu-item_news_content">
+                                    <p>大家好我是Raly，其實這篇應大家好我是Raly，其實這篇應大家好我是Raly，其實這篇應</p>
+                                    <div class="docu-item_news_arrow"><img src="./public/img/arrow-right-gray.svg" alt=""></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="docu-item">
+                            <div class="docu-item_title">
+                                <div class="d-flex align-items-center">
+                                    <div class="docu-item_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                                    <div class="docu-item_name">
+                                        <h3>RALY0505</h3>
+                                        <div class="d-flex align-items-center contract">
+                                            <img src="./public/img/icon_prize.svg" alt="">
+                                            <p>Binance-2合約</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="">跟單</a>
+                            </div>
+                            <div class="docu-item_data">
+                                <div class="docu-item_data_income">
+                                    <div>
+                                        <h4 class="docu-item_data_num color-green">+53.62%</h4>
+                                        <p class="docu-item_data_title">近30天收益率</p>
+                                    </div>
+                                    <div class="docu-item_plot">
+                                        <svg class="docu-item_plot_svg" id="docuPlot-4"></svg>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="docu-item_data_num">1932</h4>
+                                    <p class="docu-item_data_title">跟隨者</p>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="docu-item_data_num docu-item_data_danger danger-high">6</h4>
+                                    <p class="docu-item_data_title">風險評分</p>
+                                </div>
+                            </div>
+                            <div class="docu-item_news">
+                                <div class="docu-item_news_title">最新動態</div>
+                                <a href="" class="docu-item_news_content">
+                                    <p>大家好我是Raly，其實這篇應大家好我是Raly，其實這篇應大家好我是Raly，其實這篇應</p>
+                                    <div class="docu-item_news_arrow"><img src="./public/img/arrow-right-gray.svg" alt=""></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="docu-item">
+                            <div class="docu-item_title">
+                                <div class="d-flex align-items-center">
+                                    <div class="docu-item_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                                    <div class="docu-item_name">
+                                        <h3>RALY0505</h3>
+                                        <div class="d-flex align-items-center contract">
+                                            <img src="./public/img/icon_prize.svg" alt="">
+                                            <p>Binance-2合約</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="">跟單</a>
+                            </div>
+                            <div class="docu-item_data">
+                                <div class="docu-item_data_income">
+                                    <div>
+                                        <h4 class="docu-item_data_num color-green">+53.62%</h4>
+                                        <p class="docu-item_data_title">近30天收益率</p>
+                                    </div>
+                                    <div class="docu-item_plot">
+                                        <svg class="docu-item_plot_svg" id="docuPlot-5"></svg>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="docu-item_data_num">1932</h4>
+                                    <p class="docu-item_data_title">跟隨者</p>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="docu-item_data_num docu-item_data_danger danger-low">3</h4>
+                                    <p class="docu-item_data_title">風險評分</p>
+                                </div>
+                            </div>
+                            <div class="docu-item_news">
+                                <div class="docu-item_news_title">最新動態</div>
+                                <a href="" class="docu-item_news_content">
+                                    <p>大家好我是Raly，其實這篇應大家好我是Raly，其實這篇應大家好我是Raly，其實這篇應</p>
+                                    <div class="docu-item_news_arrow"><img src="./public/img/arrow-right-gray.svg" alt=""></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="current" role="tabpanel" aria-labelledby="current-tab">
+                    <div class="docu-current">
+                        <div class="docu-current_tag">LINK/USDT</div>
+                        <div class="docu-item">
+                            <div class="docu-item_title">
+                                <div class="d-flex align-items-center">
+                                    <div class="docu-item_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                                    <div class="docu-item_name">
+                                        <h3>RALY0505</h3>
+                                        <div class="d-flex align-items-center contract">
+                                            <img src="./public/img/icon_prize.svg" alt="">
+                                            <p>Binance-2合約</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="">跟單</a>
+                            </div>
+                            <div class="docu-item_data">
+                                <div class="docu-item_data_income">
+                                    <div class="text-center">
+                                        <h4 class="docu-item_data_num color-red">+53.62%</h4>
+                                        <p class="docu-item_data_title">年化收益率</p>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="docu-item_data_num">1932</h4>
+                                    <p class="docu-item_data_title">跟隨者</p>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="docu-item_data_num">1932</h4>
+                                    <p class="docu-item_data_title">投資額</p>
+                                </div>
+                            </div>
+                            <div class="docu-item_news">
+                                <div class="docu-item_news_title">最新動態</div>
+                                <a href="" class="docu-item_news_content">
+                                    <p>大家好我是Raly，其實這篇應大家好我是Raly，其實這篇應大家好我是Raly，其實這篇應</p>
+                                    <div class="docu-item_news_arrow"><img src="./public/img/arrow-right-gray.svg" alt=""></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="docu-current">
+                        <div class="docu-current_tag">LINK/USDT</div>
+                        <div class="docu-item">
+                            <div class="docu-item_title">
+                                <div class="d-flex align-items-center">
+                                    <div class="docu-item_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                                    <div class="docu-item_name">
+                                        <h3>RALY0505</h3>
+                                        <div class="d-flex align-items-center contract">
+                                            <img src="./public/img/icon_prize.svg" alt="">
+                                            <p>Binance-2合約</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="">跟單</a>
+                            </div>
+                            <div class="docu-item_data">
+                                <div class="docu-item_data_income">
+                                    <div class="text-center">
+                                        <h4 class="docu-item_data_num color-red">+53.62%</h4>
+                                        <p class="docu-item_data_title">年化收益率</p>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="docu-item_data_num">1932</h4>
+                                    <p class="docu-item_data_title">跟隨者</p>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="docu-item_data_num">1932</h4>
+                                    <p class="docu-item_data_title">投資額</p>
+                                </div>
+                            </div>
+                            <div class="docu-item_news">
+                                <div class="docu-item_news_title">最新動態</div>
+                                <a href="" class="docu-item_news_content">
+                                    <p>大家好我是Raly，其實這篇應大家好我是Raly，其實這篇應大家好我是Raly，其實這篇應</p>
+                                    <div class="docu-item_news_arrow"><img src="./public/img/arrow-right-gray.svg" alt=""></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="docu-current">
+                        <div class="docu-current_tag">LINK/USDT</div>
+                        <div class="docu-item">
+                            <div class="docu-item_title">
+                                <div class="d-flex align-items-center">
+                                    <div class="docu-item_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                                    <div class="docu-item_name">
+                                        <h3>RALY0505</h3>
+                                        <div class="d-flex align-items-center contract">
+                                            <img src="./public/img/icon_prize.svg" alt="">
+                                            <p>Binance-2合約</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="">跟單</a>
+                            </div>
+                            <div class="docu-item_data">
+                                <div class="docu-item_data_income">
+                                    <div class="text-center">
+                                        <h4 class="docu-item_data_num color-green">+53.62%</h4>
+                                        <p class="docu-item_data_title">年化收益率</p>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="docu-item_data_num">1932</h4>
+                                    <p class="docu-item_data_title">跟隨者</p>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="docu-item_data_num">1932</h4>
+                                    <p class="docu-item_data_title">投資額</p>
+                                </div>
+                            </div>
+                            <div class="docu-item_news">
+                                <div class="docu-item_news_title">最新動態</div>
+                                <a href="" class="docu-item_news_content">
+                                    <p>大家好我是Raly，其實這篇應大家好我是Raly，其實這篇應大家好我是Raly，其實這篇應</p>
+                                    <div class="docu-item_news_arrow"><img src="./public/img/arrow-right-gray.svg" alt=""></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal fade modal-common" id="modalDocu" tabindex="-1" aria-labelledby="modalDocuLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+              <ul class="modal_list">
+                <li class="active" data-bs-dismiss="modal">USDT跟單</li>
+                <li data-bs-dismiss="modal">VST跟單</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-common" id="modalMore" tabindex="-1" aria-labelledby="modalMoreLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMoreLabel">更多資料</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+                <div class="member_list">
+                    <ul class="px-4">
+                        <li>
+                            <h4 class="member_list_title">合約跟單總收益</h4>
+                            <p class="member_list_content">2117</p>
+                        </li>
+                        <li>
+                            <h4 class="member_list_title">現貨網格跟單總收益</h4>
+                            <p class="member_list_content">87.71%</p>
+                        </li>
+                        <li>
+                            <h4 class="member_list_title">Binance合約當前跟單資產</h4>
+                            <p class="member_list_content">81</p>
+                        </li>
+                        <li>
+                            <h4 class="member_list_title">BingX專業合約當前跟單資產</h4>
+                            <p class="member_list_content">67</p>
+                        </li>
+                        <li>
+                            <h4 class="member_list_title">BingX現貨網格當前跟單資產</h4>
+                            <p class="member_list_content">14</p>
+                        </li>
+                        <li>
+                            <h4 class="member_list_title">交易員已結算分成</h4>
+                            <p class="member_list_content">635.22(77.51%)</p>
+                        </li>
+                        <li>
+                            <h4 class="member_list_title">交易員待結算分成</h4>
+                            <p class="member_list_content">-911.69(-69.81%)</p>
+                        </li>
+                        <li>
+                            <h4 class="member_list_title">持倉未實現盈虧</h4>
+                            <p class="member_list_content">1:1.4</p>
+                        </li>
+                        <li>
+                            <h4 class="member_list_title">已實現盈虧</h4>
+                            <p class="member_list_content">1天14小時</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/d3/d3.min.js"></script>
+    <script src="./public/js/common.js"></script>
+    <script src="./public/js/income.js"></script>
+
+    <script>
+        $("#modalDocu .modal_list li").click(function(){
+            let docuName = $(this).text();
+            $(".modalDocu-name").text(docuName);
+            $(this).addClass("active").siblings("li").removeClass("active");
+        })
+    </script>
+
+</body>
+</html>

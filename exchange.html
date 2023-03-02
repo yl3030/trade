@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跟單資產</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_title">
+                <div class="back btn-back"><img src="./public/img/arrow-left-blue.svg" alt=""></div>
+                <h1>兑幣</h1>
+            </div>
+        </header>
+        <main class="main-inner px-3">
+            <div class="exchange">
+                <div class="exchange_coin mb-3">
+                    <div class="exchange_coin_item" data-bs-toggle="modal" data-bs-target="#modalCoin">
+                        <div class="member_nameHeader me-4">
+                            <div class="member_nameHeader_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                            <span>10SET</span>
+                        </div>
+                        <img src="./public/img/arrow-down-gray.svg" alt="">
+                    </div>
+                    <div class="exchange_coin_arrow"><img src="./public/img/icon_arrows.svg" alt=""></div>
+                    <div class="exchange_coin_item">
+                        <div class="member_nameHeader me-4">
+                            <div class="member_nameHeader_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                            <span>10SET</span>
+                        </div>
+                        <img src="./public/img/arrow-down-gray.svg" alt="">
+                    </div>
+                </div>
+                <p class="color-gray">匯率：1BTC = 18122.38USDT</p>
+                <div class="exchange_replace">
+                    <div class="exchange_replace_inner active">
+                        <div class="mb-2 d-flex align-items-center justify-content-between">
+                            <h4 class="m-0 fs-6">花費</h4>
+                            <div class="d-flex align-items-center exchange_replace_toggle">
+                                <img class="w-20px me-1" src="./public/img/icon_replace.svg" alt="">
+                                <span class="color-blueSecond">按USDT換算</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="exchange_replace_input">
+                                <input type="number" placeholder="輸入花費的BTC數量">
+                                <span class="exchange_replace_unit">BTC</span>
+                            </div>
+                            <button class="exchange_replace_btn">全部</button>
+                        </div>
+                        <div class="d-flex align-items-center mb-4 cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalAccount">
+                            <span>標準合約帳戶： 500BTC</span>
+                            <img class="w-10px ms-2" src="./public/img/triangle-down-dark.svg" alt="">
+                        </div>
+                        <p class="color-gray">預估可得： <span class="color-blueSecond">9000</span> USDT</p>
+                    </div>
+                    <div class="exchange_replace_inner">
+                        <div class="mb-2 d-flex align-items-center justify-content-between">
+                            <h4 class="m-0 fs-6">得到</h4>
+                            <div class="d-flex align-items-center exchange_replace_toggle">
+                                <img class="w-20px me-1" src="./public/img/icon_replace.svg" alt="">
+                                <span class="color-blueSecond">按BTC換算</span>
+                            </div>
+                        </div>
+                        <div class="exchange_replace_input mb-3 w-100">
+                            <input type="number" placeholder="輸入得到的USDT數量">
+                            <span class="exchange_replace_unit">BTC</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-4 cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalAccount">
+                            <span>標準合約帳戶： 500BTC</span>
+                            <img class="w-10px ms-2" src="./public/img/triangle-down-dark.svg" alt="">
+                        </div>
+                        <p class="color-gray">需花費： <span class="color-blueSecond">9000</span> BTC</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-blueMainBg mb-3">立即兌換</button>
+        </main>
+    </div>
+
+    <div class="modal fade modal-common" id="modalAccount" tabindex="-1" aria-labelledby="modalAccountLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalAccountLabel">帳戶</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+                <ul class="modal_list">
+                    <li data-bs-dismiss="modal" class="active">資金帳戶</li>
+                    <li data-bs-dismiss="modal">專業合約帳戶</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-common" id="modalTo" tabindex="-1" aria-labelledby="modalToLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalToLabel">到</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+                <ul class="modal_list">
+                    <li data-bs-dismiss="modal" class="active">資金帳戶</li>
+                    <li data-bs-dismiss="modal">專業合約帳戶</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-common" id="modalCoin" tabindex="-1" aria-labelledby="modalCoinLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCoinLabel">幣種</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+                <ul class="modal_list px-3">
+                    <li data-bs-dismiss="modal" class="active">
+                        <div class="member_nameHeader me-4">
+                            <div class="member_nameHeader_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                            <span>10SET</span>
+                        </div>
+                    </li>
+                    <li data-bs-dismiss="modal">
+                        <div class="member_nameHeader me-4">
+                            <div class="member_nameHeader_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                            <span>10SET</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/d3/d3.min.js"></script>
+    <script src="./public/js/common.js"></script>
+
+    <script>
+        $(".exchange_replace_toggle").click(function(){
+            $(this).parents(".exchange_replace_inner").removeClass("active").siblings(".exchange_replace_inner").addClass("active");
+        })
+    </script>
+
+</body>
+</html>

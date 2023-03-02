@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跟單資產</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_title pe-3 justify-content-between">
+                <div class="back btn-back"><img src="./public/img/arrow-left-blue.svg" alt=""></div>
+                <img class="cursor-pointer" src="./public/img/icon_send.svg" alt="">
+            </div>
+        </header>
+        <main class="main-inner px-3">
+            <div class="news_add">
+                <input type="text" placeholder="標題(可選)">
+                <textarea name="" id="" cols="30" rows="10" placeholder="分享您的投資經驗和交易策略..."></textarea>
+                <div class="d-flex align-items-center justify-content-between mt-2">
+                    <div class="d-flex align-items-center">
+                        <div class="news_add_item">圖片</div>
+                        <div class="news_add_item">幣種</div>
+                    </div>
+                    <span class="color-gray">0/2000</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal fade modal-common" id="modalAccount" tabindex="-1" aria-labelledby="modalAccountLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalAccountLabel">選擇帳戶</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+              <ul class="modal_list">
+                <li data-bs-dismiss="modal" class="active">資金帳戶</li>
+                <li data-bs-dismiss="modal">標準合約帳戶</li>
+                <li data-bs-dismiss="modal">專業合約帳戶</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/chart/chart.js"></script>
+    <script src="./public/js/common.js"></script>
+
+</body>
+</html>

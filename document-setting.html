@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跟單資產</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_title">
+                <div class="back btn-back"><img src="./public/img/arrow-left-blue.svg" alt=""></div>
+                <h1>跟單設定</h1>
+            </div>
+        </header>
+        <main class="main-inner pb-100 px-3">
+            <div class="blueBox dangerIntro" data-bs-toggle="modal" data-bs-target="#modalAccount">
+                <div class="d-flex align-items-center dangerIntro_head">
+                    <p class="blueBox_content m-0">風險說明</p>
+                    <div class="blueBox_arrow"><img src="./public/img/triangle-down-blue.svg" alt=""></div>
+                </div>
+                <div class="dangerIntro_content pt-2">
+                    要活晚清，教美大自服班策……為那書兩研育就會賽車時良人遊廣國雖不雖問愛的內態不別據蘭一大文青，時有人？定照車長更能、像總皮不造如身年老收人國費話車魚藝！
+                </div>
+            </div>
+            <div class="docu-setting">
+                <h2>跟單方式</h2>
+                <p class="m-0 color-gray">固定保證金跟單｜逐倉</p>
+            </div>
+            <div class="docu-setting">
+                <h2>本金型別</h2>
+                <p class="m-0 color-gray">固定保證金跟單｜逐倉</p>
+                <ul class="docu-setting_type">
+                    <li class="active">USDT</li>
+                    <li>VST</li>
+                </ul>
+            </div>
+            <div class="docu-setting">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <h2>單筆本金</h2>
+                    <div class="recent" data-bs-toggle="modal" data-bs-target="#modalAccount">
+                        <span>資金帳戶</span>
+                        <img src="./public/img/triangle-down-gray.svg" alt="">
+                    </div>
+                </div>
+                <div class="docu-setting_num">
+                    <div class="docu-setting_num_btn minus"><img src="./public/img/icon_minus.svg" alt=""></div>
+                    <input type="number" value="0">
+                    <div class="docu-setting_num_btn plus"><img src="./public/img/icon_plus-gray.svg" alt=""></div>
+                </div>
+            </div>
+            <div class="docu-setting">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h2 class="m-0">跟單保險金</h2>
+                    <div class="d-flex align-items-center">
+                        <span class="color-gray me-2">暫無可用</span>
+                        <img src="./public/img/arrow-right-gray.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="docu-setting">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h2 class="m-0">跟單後立刻複製倉位</h2>
+                    <div class="switch"><div class="switch_ball"></div></div>
+                </div>
+            </div>
+            <p class="color-gray mb-3">開啟開關後，若交易員當前有持倉，不論教意元開倉價格，跟隨後會立刻複製等比例艙位進行下單</p>
+            <div class="docu-setting">
+                <div class="d-flex align-items-center justify-content-between docu-setting_profit_head">
+                    <h2 class="m-0">盈虧止損</h2>
+                    <img class="w-15px" src="./public/img/arrow-down-gray.svg" alt="">
+                </div>
+                <div class="docu-setting_profit_content">
+                    <div class="docu-setting_profit_item">
+                        <h4>止盈設定</h4>
+                        <div class="docu-setting_num mb-2">
+                            <div class="docu-setting_num_btn minus"><img src="./public/img/icon_minus.svg" alt=""></div>
+                            <input type="number" value="0">
+                            <div class="docu-setting_num_btn plus"><img src="./public/img/icon_plus-gray.svg" alt=""></div>
+                        </div>
+                        <p class="m-0 color-gray">當前跟單資產  10.00 USDT<br>預估盈利百分比 --</p>
+                    </div>
+                    <div class="docu-setting_profit_item">
+                        <h4>止損設定</h4>
+                        <div class="docu-setting_num mb-2">
+                            <div class="docu-setting_num_btn minus"><img src="./public/img/icon_minus.svg" alt=""></div>
+                            <input type="number" value="0">
+                            <div class="docu-setting_num_btn plus"><img src="./public/img/icon_plus-gray.svg" alt=""></div>
+                        </div>
+                        <p class="m-0 color-gray">當前跟單資產  10.00 USDT<br>預估盈利百分比 --</p>
+                    </div>
+                </div>
+            </div>
+            <div class="color-gray mb-4">
+                跟單說明：
+                <ol class="ps-3">
+                    <li>由於行情變化、委託時間和委託金額不同、深度不足等客觀站，用戶與交易員開倉價、平倉價、收益率可能不同。極端行情下，差異將變大。</li>
+                    <li>正常情況下，不同幣兌的預估跟單成交價差見<a href="" class="link">關於跟單成交價格</a>的說明。</li>
+                </ol>
+            </div>
+            <p class="color-gray text-center">跟單表示您同意<a href="" class="link">跟單協議</a></p>
+        </main>
+    </div>
+
+    <div class="btn-fixed">
+        <div class="row">
+            <div class="col-12">
+                <a href="" class="btn-blueMainBg">立即跟單</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-common" id="modalAccount" tabindex="-1" aria-labelledby="modalAccountLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalAccountLabel">選擇帳戶</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+              <ul class="modal_list">
+                <li data-bs-dismiss="modal" class="active">資金帳戶</li>
+                <li data-bs-dismiss="modal">標準合約帳戶</li>
+                <li data-bs-dismiss="modal">專業合約帳戶</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/chart/chart.js"></script>
+    <script src="./public/js/common.js"></script>
+
+    <script>
+        $(".dangerIntro_head").click(function(){
+            $(this).parents(".dangerIntro").find(".dangerIntro_content").slideToggle(300);
+            $(this).parents(".dangerIntro").toggleClass("active");
+        })
+
+        $(".docu-setting_num_btn").click(function(){
+            let num = $(this).parents(".docu-setting_num").find("input").val();
+            if(num == "") {
+                num = 0;
+            }
+
+            let numInt = parseInt(num);
+            if($(this).hasClass("minus")){
+                if(numInt<=0){
+                    numInt = 0;
+                }else {
+                    numInt = numInt - 1;
+                }
+            }else if($(this).hasClass("plus")){
+                numInt = numInt + 1;
+            }
+
+            $(this).parents(".docu-setting_num").find("input").val(numInt);
+        })
+
+        $(".switch").click(function(){
+            $(this).toggleClass("active");
+        })
+
+        $(".docu-setting_profit_head").click(function(){
+            $(this).toggleClass("active");
+            $(this).parents(".docu-setting").find(".docu-setting_profit_content").slideToggle(300);
+        })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跟單資產</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_title">
+                <div class="back btn-back"><img src="./public/img/arrow-left-blue.svg" alt=""></div>
+                <h1>資金劃轉</h1>
+            </div>
+        </header>
+        <main class="main-inner px-3">
+            <div class="transfer">
+                <div class="transfer_account mb-3">
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="text-center mb-2 color-gray">從</p>
+                            <div class="transfer_account_item" data-bs-toggle="modal" data-bs-target="#modalFrom">
+                                <div class="transfer_account_text">
+                                    <p class="m-0">資金帳戶</p>
+                                    <p class="m-0 color-gray">可用：90USDT</p>
+                                </div>
+                                <img src="./public/img/triangle-down-gray.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-center mb-2 color-gray">到</p>
+                            <div class="transfer_account_item" data-bs-toggle="modal" data-bs-target="#modalTo">
+                                <div class="transfer_account_text">
+                                    <p class="m-0">資金帳戶</p>
+                                    <p class="m-0 color-gray">可用：90USDT</p>
+                                </div>
+                                <img src="./public/img/triangle-down-gray.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="transfer_account_icon"><img src="./public/img/icon_transfer2.svg" alt=""></div>
+                </div>
+                <div class="transfer_item">
+                    <h4>幣種</h4>
+                    <div class="d-flex align-items-center cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalCoin">
+                        <div class="member_nameHeader me-4">
+                            <div class="member_nameHeader_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                            <span>10SET</span>
+                        </div>
+                        <img src="./public/img/arrow-right-gray.svg" alt="">
+                    </div>
+                </div>
+                <div class="transfer_item">
+                    <div>
+                        <h4>數量</h4>
+                        <div class="mt-1 color-gray"><span class="me-3">最大可轉</span><span class="color-blueSecond me-1">800</span><span>USDT</span></div>
+                    </div>
+                    <input type="number" placeholder="請輸入數量">
+                </div>
+            </div>
+            <ul class="docu-setting_type justify-content-end mt-2 mb-5">
+                <li class="active">10%</li>
+                <li>20%</li>
+                <li>50%</li>
+                <li>100%</li>
+            </ul>
+            <button class="btn-blueMainBg mb-3">立即劃轉</button>
+            <p class="color-gray">將資產劃轉至對應帳戶才可進行交易。劃轉無需手續費，可隨時互轉。</p>
+        </main>
+    </div>
+
+    <div class="modal fade modal-common" id="modalFrom" tabindex="-1" aria-labelledby="modalFromLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalFromLabel">從</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+                <ul class="modal_list">
+                    <li data-bs-dismiss="modal" class="active">資金帳戶</li>
+                    <li data-bs-dismiss="modal">專業合約帳戶</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-common" id="modalTo" tabindex="-1" aria-labelledby="modalToLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalToLabel">到</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+                <ul class="modal_list">
+                    <li data-bs-dismiss="modal" class="active">資金帳戶</li>
+                    <li data-bs-dismiss="modal">專業合約帳戶</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-common" id="modalCoin" tabindex="-1" aria-labelledby="modalCoinLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCoinLabel">幣種</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+                <ul class="modal_list px-3">
+                    <li data-bs-dismiss="modal" class="active">
+                        <div class="member_nameHeader me-4">
+                            <div class="member_nameHeader_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                            <span>10SET</span>
+                        </div>
+                    </li>
+                    <li data-bs-dismiss="modal">
+                        <div class="member_nameHeader me-4">
+                            <div class="member_nameHeader_pic"><img src="./public/img/exPic-1.png" alt=""></div>
+                            <span>10SET</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/d3/d3.min.js"></script>
+    <script src="./public/js/common.js"></script>
+
+</body>
+</html>

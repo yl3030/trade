@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跟單資產</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_title">
+                <div class="back btn-back"><img src="./public/img/arrow-left-blue.svg" alt=""></div>
+                <h1>手機驗證</h1>
+            </div>
+        </header>
+        <main class="main-inner px-3">
+            <a href="" class="d-flex align-items-center mb-2">
+                <img class="w-20px" src="./public/img/icon_taiwan.svg" alt="">
+                <span class="mx-2">台灣+886</span>
+                <img class="w-10px" src="./public/img/triangle-down-gray.svg" alt="">
+            </a>
+            <input type="number" class="input-common mb-3" placeholder="請輸入手機號碼">
+            <button class="btn-blueMainBg" data-bs-toggle="modal" data-bs-target="#modalVertify">繫結</button>
+        </main>
+    </div>
+
+    <div class="modal fade modal-common" id="modalVertify" tabindex="-1" aria-labelledby="modalVertifyLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalVertifyLabel">安全驗證</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+              <div class="pick_vertify px-3">
+                <div class="pick_vertify_item">
+                    <h4 class="fs-6 mb-2">手機驗證<span class="color-gray ms-2">(097****8609)</span></h4>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <input type="text">
+                        <button>發送驗證碼</button>
+                    </div>
+                </div>
+                <div class="pick_vertify_item">
+                    <h4 class="fs-6 mb-2">郵箱驗證<span class="color-gray ms-2">(yl****14@gmail.com)</span></h4>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <input type="text">
+                        <button>發送驗證碼</button>
+                    </div>
+                </div>
+                <button class="btn-blueMainBg">確定</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/d3/d3.min.js"></script>
+    <script src="./public/js/common.js"></script>
+    <script src="./public/js/income.js"></script>
+
+</body>
+</html>

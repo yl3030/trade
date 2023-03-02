@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跟單資產</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="d-flex align-items-center justify-content-between pe-3">
+                <div class="header_title">
+                    <div class="back btn-back"><img src="./public/img/arrow-left-blue.svg" alt=""></div>
+                    <h1>盈虧分析</h1>
+                </div>
+                <img src="./public/img/icon_eye.svg" alt="">
+            </div>
+        </header>
+        <main class="main-inner">
+            <div class="d-flex align-items-center justify-content-between px-3 mb-3">
+                <h2 class="fs-6 m-0 fw-bold">USDT標準合約</h2>
+                <ul class="nav nav-tabs tab-timeRange" id="timeRangeTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="recent7-tab" data-bs-toggle="tab" data-bs-target="#recent7" type="button" role="tab" aria-controls="recent7" aria-selected="true">近7天</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="recent30-tab" data-bs-toggle="tab" data-bs-target="#recent30" type="button" role="tab" aria-controls="recent30" aria-selected="false">近30天</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="define-tab" data-bs-toggle="tab" data-bs-target="#define" type="button" role="tab" aria-controls="define" aria-selected="false">自定義</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content px-3" id="timeRangeContent">
+                <div class="tab-pane fade show active" id="recent7" role="tabpanel" aria-labelledby="recent7-tab">
+                    <div class="member_rate mb-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <h3 class="color-green text-center">+53.62%</h3>
+                                <p class="text-center">今日盈虧(USDT)</p>
+                            </div>
+                            <div class="col-6">
+                                <h3 class="color-green text-center">+53.62%</h3>
+                                <p class="text-center">昨日盈虧(USDT)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profit_chart">
+                        <h3>每日盈虧</h3>
+                        <canvas id="profit_chart_day-7days"></canvas>
+                    </div>
+                    <div class="profit_chart">
+                        <h3>累計盈虧</h3>
+                        <canvas id="profit_chart_accumulate-7days"></canvas>
+                    </div>
+                    <div class="profit_chart">
+                        <h3>收益率</h3>
+                        <canvas id="profit_chart_rate-7days"></canvas>
+                    </div>
+                    <div class="color-gray">
+                        <p class="m-0">備註</p>
+                        <ol class="ps-3">
+                            <li>USDT合約盈虧，僅統計以USDT為本金的盈虧資料，不包含贈金盈利。</li>
+                            <li>各項交易成本，包含手續費、資金費用都已納入盈虧計算。</li>
+                            <li>由於業務資料複雜與匯率波動，可能導致出現計算誤差或延遲。以上資料僅供參考。</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="recent30" role="tabpanel" aria-labelledby="recent30-tab">
+                    <div class="member_rate mb-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <h3 class="color-green text-center">+53.62%</h3>
+                                <p class="text-center">今日盈虧(USDT)</p>
+                            </div>
+                            <div class="col-6">
+                                <h3 class="color-green text-center">+53.62%</h3>
+                                <p class="text-center">昨日盈虧(USDT)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profit_chart">
+                        <h3>每日盈虧</h3>
+                        <canvas id="profit_chart_day-30days"></canvas>
+                    </div>
+                    <div class="profit_chart">
+                        <h3>累計盈虧</h3>
+                        <canvas id="profit_chart_accumulate-30days"></canvas>
+                    </div>
+                    <div class="profit_chart">
+                        <h3>收益率</h3>
+                        <canvas id="profit_chart_rate-30days"></canvas>
+                    </div>
+                    <div class="color-gray">
+                        <p class="m-0">備註</p>
+                        <ol class="ps-3">
+                            <li>USDT合約盈虧，僅統計以USDT為本金的盈虧資料，不包含贈金盈利。</li>
+                            <li>各項交易成本，包含手續費、資金費用都已納入盈虧計算。</li>
+                            <li>由於業務資料複雜與匯率波動，可能導致出現計算誤差或延遲。以上資料僅供參考。</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="define" role="tabpanel" aria-labelledby="define-tab">
+                    <div class="member_rate mb-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <h3 class="color-green text-center">+53.62%</h3>
+                                <p class="text-center">今日盈虧(USDT)</p>
+                            </div>
+                            <div class="col-6">
+                                <h3 class="color-green text-center">+53.62%</h3>
+                                <p class="text-center">昨日盈虧(USDT)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex align-items-center justify-content-between mb-3 color-gray">
+                            <span>日期篩選</span>
+                            <span>共10天</span>
+                        </div>
+                        <div class="profit_range">
+                            <input type="text" id="datepickerFrom">
+                            <span>-</span>
+                            <input type="text" id="datepickerTo">
+                            <button>確定</button>
+                        </div>
+                    </div>
+                    <div class="profit_chart">
+                        <h3>每日盈虧</h3>
+                        <canvas id="profit_chart_day-define"></canvas>
+                    </div>
+                    <div class="profit_chart">
+                        <h3>累計盈虧</h3>
+                        <canvas id="profit_chart_accumulate-define"></canvas>
+                    </div>
+                    <div class="profit_chart">
+                        <h3>收益率</h3>
+                        <canvas id="profit_chart_rate-define"></canvas>
+                    </div>
+                    <div class="color-gray">
+                        <p class="m-0">備註</p>
+                        <ol class="ps-3">
+                            <li>USDT合約盈虧，僅統計以USDT為本金的盈虧資料，不包含贈金盈利。</li>
+                            <li>各項交易成本，包含手續費、資金費用都已納入盈虧計算。</li>
+                            <li>由於業務資料複雜與匯率波動，可能導致出現計算誤差或延遲。以上資料僅供參考。</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal fade modal-common" id="modalAccount" tabindex="-1" aria-labelledby="modalAccountLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalAccountLabel">帶單帳戶</h5>
+              <button type="button" class="modal-close" data-bs-dismiss="modal"><img src="./public/img/icon_x.svg" alt=""></button>
+            </div>
+            <div class="modal-body">
+              <ul class="modal_list">
+                <li class="active" data-bs-dismiss="modal">全部</li>
+                <li data-bs-dismiss="modal">BingX標準合約</li>
+                <li data-bs-dismiss="modal">BingX永續合約</li>
+                <li data-bs-dismiss="modal">Binance合約</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/d3/d3.min.js"></script>
+    <script src="./public/js/chart/chart.js"></script>
+    <script src="./public/js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="./public/js/common.js"></script>
+    <script src="./public/js/profit.js"></script>
+
+    <script>
+        $( function() {
+            $( "#datepickerFrom" ).datepicker();
+            $( "#datepickerTo" ).datepicker();
+        } );
+    </script>
+</body>
+</html>
