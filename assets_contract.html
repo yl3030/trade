@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
 </head>
 <body>
@@ -17,16 +18,16 @@
             <div class="header_assets">
                 <div class="d-flex align-items-center justify-content-between ps-3 mb-3">
                     <h1>我的資產</h1>
-                    <div class="header_assets_profitBtn">
+                    <a href="./profit.html" class="header_assets_profitBtn">
                         <img src="./public/img/icon_pie-chart.svg" alt="">
                         <span>盈虧分析</span>
-                    </div>
+                    </a>
                 </div>
                 <ul class="tab-second">
-                    <li><a href="">總覽</a></li>
-                    <li><a href="">資金</a></li>
-                    <li><a href="" class="active">合約</a></li>
-                    <li><a href="">跟單</a></li>
+                    <li><a href="./assets_total.html">總覽</a></li>
+                    <li><a href="./assets_money.html">資金</a></li>
+                    <li><a href="./assets_contract.html" class="active">合約</a></li>
+                    <li><a href="./assets_document.html">跟單</a></li>
                 </ul>
             </div>
         </header>
@@ -89,7 +90,7 @@
                                     <div class="member_nameHeader_pic"><img src="./public/img/exPic-1.png" alt=""></div>
                                     <span>10SET</span>
                                 </div>
-                                <a href="" class="contract_item_arrow"><img src="./public/img/arrow-right-blue.svg" alt=""></a>
+                                <a href="./assets_contract_detail.html" class="contract_item_arrow"><img src="./public/img/arrow-right-blue.svg" alt=""></a>
                             </div>
                             <div class="member_list px-3">
                                 <ul>
@@ -114,7 +115,7 @@
                                     <div class="member_nameHeader_pic"><img src="./public/img/exPic-1.png" alt=""></div>
                                     <span>10SET</span>
                                 </div>
-                                <a href="" class="contract_item_arrow"><img src="./public/img/arrow-right-blue.svg" alt=""></a>
+                                <a href="./assets_contract_detail.html" class="contract_item_arrow"><img src="./public/img/arrow-right-blue.svg" alt=""></a>
                             </div>
                             <div class="member_list px-3">
                                 <ul>
@@ -145,7 +146,7 @@
     <footer class="footer">
         <ul>
             <li>
-                <a href="">
+                <a href="./document_contract.html">
                     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.92871 12.5C9.81181 12.5 10.6751 12.2381 11.4093 11.7475C12.1436 11.2568 12.7159 10.5595 13.0538 9.7436C13.3917 8.92771 13.48 8.02994 13.3077 7.16382C13.1354 6.29771 12.7101 5.50215 12.0856 4.87776C11.4611 4.25337 10.6654 3.8282 9.79928 3.65601C8.93313 3.48382 8.03538 3.57235 7.21955 3.9104C6.40372 4.24846 5.70646 4.82085 5.21595 5.55519C4.72544 6.28954 4.46371 7.15284 4.46387 8.03594C4.46511 9.21964 4.93593 10.3545 5.77301 11.1914C6.61008 12.0283 7.74501 12.499 8.92871 12.5ZM8.92871 5.1336C9.50274 5.1336 10.0639 5.30382 10.5412 5.62273C11.0185 5.94164 11.3905 6.39493 11.6101 6.92526C11.8298 7.45559 11.8873 8.03916 11.7753 8.60216C11.6633 9.16516 11.3869 9.68231 10.981 10.0882C10.5751 10.4941 10.0579 10.7705 9.49493 10.8825C8.93193 10.9945 8.34837 10.937 7.81803 10.7174C7.2877 10.4977 6.83441 10.1257 6.5155 9.6484C6.19659 9.17111 6.02637 8.60997 6.02637 8.03594C6.02699 7.26638 6.33297 6.52852 6.87713 5.98436C7.42129 5.4402 8.15915 5.13422 8.92871 5.1336Z" fill="white"/>
                         <path d="M18.3594 12.8906C19.0161 12.8906 19.658 12.6959 20.204 12.3311C20.7501 11.9662 21.1756 11.4477 21.4269 10.8409C21.6783 10.2342 21.744 9.56663 21.6159 8.92255C21.4878 8.27848 21.1715 7.68685 20.7072 7.2225C20.2428 6.75814 19.6512 6.44192 19.0071 6.3138C18.3631 6.18569 17.6955 6.25144 17.0887 6.50275C16.482 6.75405 15.9635 7.17962 15.5986 7.72565C15.2338 8.27167 15.0391 8.91362 15.0391 9.57031C15.0401 10.4506 15.3902 11.2945 16.0127 11.917C16.6352 12.5394 17.4791 12.8896 18.3594 12.8906ZM18.3594 7.8125C18.707 7.8125 19.0469 7.9156 19.336 8.10875C19.625 8.3019 19.8503 8.57643 19.9834 8.89763C20.1164 9.21883 20.1512 9.57226 20.0834 9.91325C20.0156 10.2542 19.8482 10.5674 19.6023 10.8133C19.3565 11.0591 19.0433 11.2265 18.7023 11.2944C18.3613 11.3622 18.0079 11.3274 17.6867 11.1943C17.3655 11.0613 17.091 10.836 16.8978 10.5469C16.7047 10.2578 16.6016 9.91798 16.6016 9.57031C16.602 9.10424 16.7873 8.65737 17.1169 8.32781C17.4464 7.99825 17.8933 7.81292 18.3594 7.8125Z" fill="white"/>
@@ -155,7 +156,7 @@
                 </a>
             </li>
             <li>
-                <a href="" class="active">
+                <a href="./assets_total.html" class="active">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_23_12)">
                         <path d="M18.0292 3.54153C17.9214 2.15029 16.7557 1.05103 15.3374 1.05103H2.70086C1.2116 1.05103 0 2.26263 0 3.75188V16.2481C0 17.7374 1.2116 18.949 2.70086 18.949H17.2992C18.7884 18.949 20 17.7374 20 16.2481V6.1413C20 4.90505 19.1648 3.8609 18.0292 3.54153ZM2.70086 2.31274H15.3374C16.024 2.31274 16.5994 2.79618 16.7422 3.44048H2.70086C2.17208 3.44048 1.67871 3.59382 1.26172 3.85751V3.75188C1.26172 2.95834 1.90732 2.31274 2.70086 2.31274ZM17.2991 17.6873H2.70086C1.90732 17.6873 1.26172 17.0417 1.26172 16.2481V6.1413C1.26172 5.34776 1.90732 4.70215 2.70086 4.70215H17.2992C18.0927 4.70215 18.7383 5.34776 18.7383 6.1413V8.34291H14.7156C13.1215 8.34291 11.8246 9.63984 11.8246 11.2339C11.8246 12.828 13.1215 14.125 14.7156 14.125H18.7383V16.2481C18.7383 17.0417 18.0927 17.6873 17.2991 17.6873ZM18.7383 12.8632H14.7156C13.8172 12.8632 13.0863 12.1324 13.0863 11.2339C13.0863 10.3355 13.8172 9.60463 14.7156 9.60463H18.7383V12.8632Z" fill="#3E3E3E"/>
@@ -205,7 +206,7 @@
                         <div class="check_box"><img src="./public/img/icon_check.svg" alt=""></div>
                         <span class="color-gray">下次不再提醒</span>
                     </div>
-                    <a href="" class="btn-blueMainBg">我知道了</a>
+                    <a class="btn-blueMainBg">我知道了</a>
                 </div>
               </div>
             </div>
@@ -216,6 +217,10 @@
     <script src="./public/js/jquery/jquery.min.js"></script>
     <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./public/js/d3/d3.min.js"></script>
+    <script src="./public/js/chart/chart.js"></script>
+    <script src="./public/js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="./public/js/draggable/jquery-slider-min.js"></script>
+    <script src="./public/js/draggable/jquery.mobile.custom.min.js"></script>
     <script src="./public/js/common.js"></script>
     <script src="./public/js/income.js"></script>
 

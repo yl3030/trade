@@ -374,6 +374,10 @@ main.main-assets {
   width: 50%;
 }
 
+.btn-back {
+  cursor: pointer;
+}
+
 .tab-main {
   display: -webkit-box;
   display: -ms-flexbox;
