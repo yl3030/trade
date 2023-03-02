@@ -214,6 +214,10 @@ main.main-assets {
   padding-bottom: 150px !important;
 }
 
+.pb-80 {
+  padding-bottom: 80px !important;
+}
+
 .bb-ea {
   border-bottom: 1px solid #eaeaea;
 }
